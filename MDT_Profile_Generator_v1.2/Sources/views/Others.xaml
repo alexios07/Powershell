@@ -1,0 +1,74 @@
+<Grid
+    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+	<Grid  Margin="20,20,0,0">
+		<StackPanel HorizontalAlignment="Left" Width="750">													
+			<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">							
+				<Label Content="Finish action" Margin="0,0,0,0" Width="80"></Label>
+				<ComboBox x:Name="Finish_Action" SelectedIndex="0" Text="Finish action" Height="25" Width="185" Margin="5,0,0,0">
+					<ComboBoxItem x:Name="Finish_Action_DoNothing" Content="Do nothing"/>
+					<ComboBoxItem x:Name="Finish_Action_Reboot" Content="Reboot"/>
+					<ComboBoxItem x:Name="Finish_Action_Shutdown" Content="Shutdown"/>	
+					<ComboBoxItem x:Name="Finish_Action_LogOff" Content="LogOff"/>																				
+				</ComboBox>                         								
+			</StackPanel>		
+			
+			<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">							
+				<Label Content="GPO Pack" Margin="0,0,0,0" Width="80"></Label>
+				<ComboBox x:Name="GPO_Pack_path" SelectedIndex="0" Text="Finish action" Height="25" Width="185" Margin="5,0,0,0">
+					<ComboBoxItem x:Name="GPO_Pack_DoNothing" Content="Do not apply"/>																	
+				</ComboBox> 
+				<Label x:Name="GPO_Pack_Info" Margin="4,0,0,0" Width="300"></Label>																																			
+			</StackPanel>									
+
+			<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">
+				<Label Content="WSUS Server" Margin="0,0,0,0" Width="80"></Label>
+				<TextBox x:Name="Set_WSUS_Server" Margin="5,0,0,0" Width="185" Height="19"></TextBox>			
+			</StackPanel>		
+
+			<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">
+				<Label Content="Event service" Margin="0,0,0,0" Width="80"></Label>
+				<TextBox x:Name="Event_Service" Margin="5,0,0,0" Width="185" Height="19"></TextBox>			
+				<Label Content="Set the live reporting in the monitoring section " Margin="4,0,0,0" Width="300"></Label>																																												
+			</StackPanel>			
+
+			<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">
+				<Label Content="End Log files" Margin="0,0,0,0" Width="80"></Label>
+				<TextBox x:Name="Logs_SLShare" Margin="5,0,0,0" Width="185" Height="19"></TextBox>	
+				<CheckBox x:Name="SLShare_Deployroot" Content="Set on the deployroot" Margin="10,5,0,0" Height="19"></CheckBox>																											
+			</StackPanel>			
+
+			<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">
+				<Label Content="Real time log" Margin="0,0,0,0" Width="80"></Label>
+				<TextBox x:Name="Logs_SLShareDynamicLogging" Margin="5,0,0,0" Width="185" Height="19"></TextBox>			
+				<Label Content="Enable the real time logging of your Task Sequence" Margin="4,0,0,0" Width="300"></Label>																																												
+			</StackPanel>		
+
+			<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">
+				<Label Content="Product Key" Margin="0,0,0,0" Width="80"></Label>
+				<ComboBox x:Name="Product_Key" SelectedIndex="0" Text="Finish action" Height="25" Width="185" Margin="5,0,0,0">
+					<ComboBoxItem x:Name="No_Product_Key" Content="No product key is required"/>
+					<ComboBoxItem x:Name="Activate_MAK" Content="Activate with multiple activation key(MAK)"/>
+					<ComboBoxItem x:Name="specific_product" Content="Use a specific product key"/>	
+				</ComboBox>   
+
+				<StackPanel x:Name="Product_Key_Block" Orientation="Horizontal" FlowDirection="LeftToRight" Margin="4,0,0,0">
+					<!-- <Label x:Name="Key_Label" Margin="0,0,0,0" Width="80"></Label> -->
+					<TextBox x:Name="Key_Label_TextBox" Margin="5,0,0,0" Width="200" Height="19"></TextBox>			
+				</StackPanel>					
+			</StackPanel>	
+
+		
+									
+			<StackPanel Orientation="Vertical"  Margin="4,10,0,0">
+				<CheckBox x:Name="Hide_Shell" Content="Hide explorer during the deployment process" ToolTip="Hide the product key wizard panes" Margin="0,5,0,0" Height="19"></CheckBox>
+				<CheckBox x:Name="Not_extra_partition" Content="Do not create extra partition" ToolTip="Hide the product key wizard panes" Margin="0,5,0,0" Height="19"></CheckBox>
+			</StackPanel>  	
+											
+		</StackPanel>	
+	</Grid>	
+	
+</Grid>

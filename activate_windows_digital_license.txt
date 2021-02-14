@@ -1,0 +1,4 @@
+Set-ExecutionPolicy Bypass -Force
+$ProductKey = (Get-WmiObject -Class SoftwareLicensingService).OA3xOriginalProductKey
+iex "cscript /b C:\Windows\System32\slmgr.vbs -ipk $Productkey" 
+iex "cscript /b C:\Windows\System32\slmgr.vbs -ato"

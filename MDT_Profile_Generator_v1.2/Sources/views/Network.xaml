@@ -1,0 +1,46 @@
+<Grid
+    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<Grid  Margin="20,20,0,0">
+		<StackPanel>				
+			<StackPanel  Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">							
+				<Label Content="Network type" Margin="4,0,0,0" Width="110"></Label>
+				<ComboBox x:Name="Choose_Network" SelectedIndex="0" Text="Choose" Height="25" Width="185" Margin="0,0,0,0">
+					<ComboBoxItem x:Name="Choose_DHCP" Content="DHCP"></ComboBoxItem>
+					<ComboBoxItem x:Name="Choose_Static" Content="Static"></ComboBoxItem>
+				</ComboBox>  	
+			<!--	<Button x:Name="Choose_Network_Type" Content="Choose"  Margin="5,0,0,0" Width="80" Height="26"></Button>-->														
+			</StackPanel>
+					
+			<StackPanel x:Name="Network_Block">										
+				<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">
+					<Label Content="IP Address " Margin="4,0,0,0" Width="110"></Label>
+					<TextBox x:Name="IPAddress" Margin="0,0,0,0" Width="185" Height="19"></TextBox>																				
+				</StackPanel>
+							
+				<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">
+					<Label Content="Gateway" Margin="4,0,0,0" Width="110"></Label>
+					<TextBox x:Name="Gateway" Margin="0,0,0,0" Width="185" Height="19"></TextBox>
+				</StackPanel>								
+							
+				<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">
+					<Label Content="Mask" Margin="4,0,0,0" Width="110"></Label>
+					<TextBox x:Name="SubnetMask" Margin="0,0,0,0" Width="185" Height="19"></TextBox>
+				</StackPanel>	
+				
+				<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">
+					<Label Content="DNS Server(s)" Margin="4,0,0,0" Width="110"></Label>
+					<TextBox x:Name="DNS_Server" Margin="0,0,0,0" Width="185" Height="19"></TextBox>
+				</StackPanel>
+			</StackPanel>			
+				
+				<StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" Margin="0,5,0,0">
+					<Label Content="Home page" Margin="4,0,0,0" Width="110"></Label>
+					<TextBox x:Name="IE_home_page" Margin="0,0,0,0" Width="185" Height="19"></TextBox>			
+					<Label Content="Set your Internet Explorer home page" Margin="4,0,0,0" Width="300"></Label>																
+				</StackPanel>	
+		</StackPanel>   
+	</Grid>				
+</Grid>

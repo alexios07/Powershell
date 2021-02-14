@@ -1,0 +1,19 @@
+<Grid
+    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<Grid Background="CornFlowerBlue" Margin="15,15,15,15">
+		<DataGrid SelectionMode="Extended" AutoGenerateColumns="True" Height="300" Name="DataGrid_Applis"  ItemsSource="{Binding}"  Margin="2,2,2,2" >
+			<DataGrid.Columns>			
+			<DataGridCheckBoxColumn ElementStyle="{DynamicResource MetroDataGridCheckBox}"
+				EditingElementStyle="{DynamicResource MetroDataGridCheckBox}"
+				Header="Select"
+				Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow}, Path=IsSelected, Mode=OneWay}"
+			/>				
+			<DataGridTextColumn Header="Name" Binding="{Binding Appli_Name}"/>										
+			<DataGridTextColumn Header="GUID" Binding="{Binding Appli_GUID}"/>																					
+			</DataGrid.Columns>
+		</DataGrid>	  
+	</Grid>				
+</Grid>

@@ -1,0 +1,1 @@
+Export-WindowsDriver -Online -Destination D:\Path\To\Drivers

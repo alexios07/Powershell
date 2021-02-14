@@ -1,0 +1,1 @@
+﻿Get-WmiObject -computername new-rental-c-31 -Namespace root/hp/instrumentedBIOS -Class hp_biosEnumeration | select name, value | format-table name, value -autosize

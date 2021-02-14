@@ -1,0 +1,2 @@
+PS C:\users\mtran\Documents\Powershell2> .\get_monitor.ps1 -ComputerName (Get-Content 'f:\list2.txt') | Export-Csv 'f:\t
+est.csv' -NoTypeInfo
